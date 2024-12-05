@@ -1,0 +1,222 @@
+.aboutme__section {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--body-color-dark2);
+}
+
+.aboutme__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 2.5%;
+  padding: 1rem;
+}
+
+.profile__picture {
+  width: 250px;
+  height: 250px;
+  background-color: rgba(255, 170, 227, 0.856);
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.932);
+  order: 1;
+  animation: profile__animate 5s ease-in-out infinite 1s;
+}
+
+.profile__picture img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.terminal__loader {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 55%;
+  max-width: 600px;
+  max-height: 450px;
+  padding: 0;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 2);
+  border-radius: 9px;
+  box-sizing: border-box;
+}
+
+.terminal__screen {
+  background-color: #1a1a1a;
+  font-size: 1rem;
+  border: 2.5px solid #333;
+  width: 100%;
+  height: 93%;
+  padding: 1.5rem;
+  text-align: justify;
+  box-sizing: border-box;
+}
+
+.terminal__header {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5rem;
+  background-color: #333;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 0 0.4rem;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.terminal__title {
+  font-family: var(--body-font);
+  font-size: 15px;
+  color: #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.terminal__name {
+  color: #0b0;
+  font-size: 1rem;
+  font-weight: var(--font-medium);
+}
+
+.terminal__text {
+  font-size: var(--small-font);
+  font-weight: var(--font-medium);
+
+  p {
+    font-size: 0.85rem;
+  }
+}
+
+.terminal__controls {
+  float: left;
+}
+
+.control {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-left: 0.4rem;
+  border-radius: 50%;
+  background-color: #777;
+}
+
+.control.close {
+  background-color: #e33;
+}
+
+.control.minimize {
+  background-color: #ee0;
+}
+
+.control.maximize {
+  background-color: #0b0;
+}
+
+button {
+  background-color: transparent;
+  color: var(--text-white-color);
+  border-radius: 10rem;
+  font-size: var(--small-size);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid white;
+  box-shadow: 0 0 0 0 white;
+  margin: 0.22rem;
+  padding-bottom: 0.3rem;
+
+  span {
+    font-size: small;
+    font-weight: lighter;
+  }
+}
+
+button:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 white;
+}
+
+button:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 white;
+}
+
+@keyframes profile__animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+/*-----------------Screens---------------------------*/
+
+@media screen and (max-width: 840px) {
+  .aboutme__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .aboutme__terminalsection {
+    max-width: 500px;
+  }
+
+  .aboutme__terminalsection {
+    width: 100%;
+    height: 100%;
+  }
+
+  .profile__picture {
+    width: 200px;
+    height: 200px;
+    order: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile__picture {
+    width: 150px;
+    height: 150px;
+  }
+
+  .terminal__text {
+    font-size: var(--small-font-size);
+    text-align: center;
+  }
+
+  .terminal__btn {
+    font-size: 0.5rem;
+    padding: 0.3rem 0.4rem;
+  }
+
+  .aboutme__container {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .terminal__text {
+    font-size: var(--smaller-font-size);
+  }
+  .terminal__btn {
+    font-size: 0.3rem;
+    padding: 0.2rem 0.3rem;
+  }
+}

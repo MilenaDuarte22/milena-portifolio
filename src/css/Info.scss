@@ -1,0 +1,239 @@
+.info__section {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--body-color-dark);
+}
+
+.info__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+.info__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+}
+
+.info__text {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+}
+
+.info__title {
+  font-weight: var(--font-semi-bold);
+  font-size: var(--h2-font-size);
+  margin-left: 3.5%;
+  margin-right: 40%;
+  margin-bottom: 8%;
+
+  span {
+    color: transparent;
+    -webkit-text-stroke: 1.5px whitesmoke;
+  }
+}
+
+.info__boxes {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1%;
+  margin: 1.5%;
+
+  padding: 1rem;
+}
+
+.info__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d1e22;
+  color: var(--text-white-color);
+  height: 100%;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 0.9rem;
+  text-align: center;
+  padding: 2rem;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+
+  .uil {
+    font-size: 1.7rem;
+    color: var(--text-white-color);
+  }
+
+  .info__boxtitle {
+    margin: 5px;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-normal);
+    color: var(--text-white-color);
+  }
+
+  .info__text {
+    padding-top: 0.4rem;
+    font-size: var(--small-size);
+    color: var(--text-white-color);
+  }
+
+  &:hover {
+    background-color: var(--text-white-color);
+    color: #171616;
+
+    .uil {
+      color: rgb(0, 0, 0);
+    }
+
+    .info__boxtitle {
+      color: rgb(0, 0, 0);
+    }
+
+    .info__text {
+      color: rgb(0, 0, 0);
+    }
+  }
+}
+
+.info__contactme {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+}
+
+.info__contactbx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-left: 1%;
+  gap: 1rem;
+
+  .info__titledw {
+    font-size: var(--small-size);
+    font-weight: lighter;
+    text-align: justify;
+  }
+
+  p {
+    font-size: var(--small-size);
+  }
+}
+
+/*-------------Screens----------------------------------*/
+
+@media screen and (max-width: 1024px) {
+  .info__title {
+    font-weight: var(--font-semi-bold);
+    font-size: var(--test-size);
+  }
+
+  .info__boxes {
+    gap: 2%;
+    margin: 2%;
+  }
+
+  .info__box {
+    height: 100%;
+
+    .uil {
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .info__boxtitle {
+      margin: 4px;
+      font-size: var(--normal-size);
+    }
+
+    .info__text {
+      padding-top: 0.5rem;
+      font-size: var(--small-size);
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .info__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info__img {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .info__boxes {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto;
+    gap: 0.65rem;
+    margin: 0;
+    padding: 0.4rem;
+  }
+
+  .info__title {
+    font-weight: var(--font-semi-bold);
+    font-size: 2.5rem;
+    margin-top: 9%;
+    margin-bottom: 9%;
+
+    span {
+      color: transparent;
+      -webkit-text-stroke: 1.5px whitesmoke;
+    }
+  }
+
+  .info__box {
+    width: 100%;
+    height: 100%;
+
+    .uil {
+      font-size: 1rem;
+      color: var(--text-white-color);
+    }
+
+    .info__boxtitle {
+      margin: 0.5px;
+      font-size: var(--normal-size);
+      font-weight: var(--font-normal);
+      color: var(--text-white-color);
+    }
+
+    .info__text {
+      padding-top: 0.6rem;
+      font-size: var(--tiny-size);
+      color: var(--text-white-color);
+    }
+  }
+
+  .info__contactbx {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0%;
+
+    .info__titledw {
+      font-size: var(--small-size);
+      font-weight: lighter;
+      text-align: justify;
+    }
+
+    .info__contactbtn {
+      margin: 0.5rem;
+    }
+  }
+}

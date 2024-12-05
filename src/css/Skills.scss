@@ -1,0 +1,135 @@
+.skills__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--body-color-dark);
+}
+
+.skills__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.about__title {
+  color: var(--text-white-color);
+  font-weight: var(--font-normal);
+  font-size: var(--header-height);
+  padding-right: 50%;
+}
+
+.about__subtitle {
+  padding-right: 40%;
+  color: var(--text-white-color);
+  font-weight: var(--font-light);
+  font-size: var(--normal-size);
+  margin-bottom: 5%;
+}
+
+.skills__title {
+  color: var(--text-white-color);
+  font-size: var(--normal-size);
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 35px;
+
+  span {
+    font-weight: bold;
+    color: var(--title-span-color);
+  }
+}
+
+.skills__technologies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.skills__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 2px;
+  border-radius: 15px;
+  border: 1.5px solid;
+  color: purple;
+  animation: float 5s ease-in-out infinite;
+  transition: tranform 0.5 ease, opacity 0.5s ease;
+
+  &:nth-child(2) {
+    animation-duration: 6s;
+  }
+
+  &:nth-child(3) {
+    animation-duration: 7s;
+  }
+
+  &:nth-child(4) {
+    animation-duration: 3s;
+  }
+
+  &:nth-child(5) {
+    animation-duration: 4s;
+  }
+
+  &:nth-child(6) {
+    animation-duration: 8s;
+  }
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.bottomBlur2 {
+  position: relative;
+  width: 10vw;
+  height: 10vw;
+  margin-left: 80%;
+  background-color: rgb(255, 0, 170, 40%);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about__title {
+    align-items: center;
+    justify-content: center;
+    font-size: var(--small-size);
+    padding-right: 0rem;
+  }
+
+  .about__subtitle {
+    justify-content: center;
+    align-items: center;
+    --normal-size: 1.25rem;
+    font-size: var();
+    padding-right: 0rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .about__title {
+    font-size: var(--medium-size);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
